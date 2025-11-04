@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>BrawlGuide // Заказ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Russo One', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff0000;
+      margin-top: 60px;
+      font-size: 2em;
+    }
+
+    form {
+      background-color: #111;
+      width: 60%;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff0000;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Russo One', sans-serif;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"],
+    input[type="number"], input[type="date"], input[type="password"],
+    textarea, select {
+      background-color: #222;
+      color: white;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .submit-btn {
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #cc0000;
+    }
+
+    
+    #success-message {
+      display: none;
+      margin-top: 100px;
+      font-size: 1.3em;
+      color: white;
+      animation: fadeIn 0.7s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .home-button {
+      margin-top: 30px;
+      display: inline-block;
+      background-color: #ff0000;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+
+    .home-button:hover {
+      background-color: #cc0000;
+    }
+
+    footer {
+      margin-top: 60px;
+      color: gray;
+      font-size: 0.9em;
+    }
+
+    
+    .inline-options {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .inline-options label {
+      text-align: center;
+    }
+    .checkbox-label {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 20px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+
+  <h1>Оформление заказа</h1>
+
+  <form id="order-form" action="https://example.com/submit" method="post">
+    
+    <label for="lastname">Ваша фамилия:</label>
+    <input type="text" id="lastname" name="lastname" value="Иванова" required>
+
+    <label for="name">Ваше имя:</label>
+    <input type="text" id="name" name="name" value="Полина" required>
+
+    <label for="group">Номер группы:</label>
+    <input type="text" id="group" name="group" value="БИО-23" required>
+    <label for="phone">Номер телефона:</label>
+    <input type="tel" id="phone" name="phone" placeholder="+7 XXX XXX-XX-XX" required>
+
+    <label for="email">Электронная почта:</label>
+    <input type="email" id="email" name="email" value="example@mail.ru" required>
+
+    <label for="date">Дата отправки заказа:</label>
+    <input type="date" id="date" name="send_date" required>
+
+    
+    <label for="item">Выбранный товар:</label>
+    <select id="item" name="item">
+      <option value="tshirt-pink">Футболка "Brawl Stars", розовая</option>
+      <option value="hoodie-sandy">Худи "Сэнди"</option>
+      <option value="figure-bo">Фигурка Бо</option>
+      <option value="mug-bibi">Кружка "BIBI"</option>
+    </select>
+
+    <label for="quantity">Количество:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+
+    <label>Выберите размер одежды:</label>
+    <div class="inline-options">
+      <label><input type="radio" name="size" value="S" checked> S</label>
+      <label><input type="radio" name="size" value="M"> M</label>
+      <label><input type="radio" name="size" value="L"> L</label>
+    </div>
+
+    <label class="checkbox-label">
+  <span>Подписаться на новости BrawlGuide</span>
+  <input type="checkbox" name="newsletter" value="yes" checked>
+</label>
+
+    <label for="password">Придумайте пароль для отслеживания заказа:</label>
+    <input type="password" id="password" name="password" value="12345" required>
+
+    
+    <input type="hidden" name="site_code" value="brawlguide2025">
+
+    <input type="submit" value="Отправить заказ" class="submit-btn">
+  </form>
+
+  <div id="success-message">
+    <h1>Спасибо! Ваш заказ принят.</h1>
+    <p>Вся информация по статусу заказа придёт вам на почту.</p>
+    <a href="index.html" class="home-button">На главную</a>
+  </div>
+
+  <footer>
+    <p>BrawlGuide © 2025. Некоммерческая и несерьёзная организация.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('order-form');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      form.style.display = 'none'; 
+      successMessage.style.display = 'block'; 
+    });
+  </script>
+
+</body>
+</html>

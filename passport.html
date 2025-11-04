@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>BrawlGuide // Паспорт</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+   
+    .passport-wrapper {
+      position: relative;
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+
+   .passport-container {
+  position: relative;
+  display: inline-block;
+  left: 25%;
+  transform: translateX(-40%); 
+}
+
+    .passport-background {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .passport-text {
+      position: absolute;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .rotated {
+      transform: rotate(90deg);
+      transform-origin: left top;
+      font-size: 14px;
+    }
+
+    .passport-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .passport-btn {
+      background-color: #ff4500;
+      color: #fff;
+      font-size: 18px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .passport-btn:hover {
+      background-color: #ffd700;
+      color: #000;
+    }
+
+
+    .passport-container {
+  position: relative; 
+  width: 600px;     
+}
+
+.passport-background {
+  width: 100%;
+  display: block;
+}
+
+.passport-photo {
+  position: absolute;
+  top: 68%;   
+  left: 5%;  
+  width: 170px; 
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid white;
+  border-radius: 6px;
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Brawl Stars">
+</header>
+<nav>
+    <h1 class="quote bungee-regular">Кубки — всего лишь кусок виртуального металла?</h1>
+    <div class="links">
+      <a href="index.html">Главная</a>
+      <a href="brawlers.html">Бравлеры</a>
+      <a href="modes.html">Режимы</a>
+      <a href="shop.html">Мерч</a>
+      <a href="test.html">Штаб</a>
+      <a href="contacts.html" class="active">Контакты</a>
+    </div>
+  </nav>
+
+<main>
+  <div class="passport-wrapper">
+    <div class="passport-container">
+      <img src="passport.png" alt="Паспорт" class="passport-background">
+
+      <div class="passport-text" id="text1" style="top: 10%; left: 20%;">ОТДЕЛОМ УФМС РОССИИ В ПОС. ХАРП</div>
+      <div class="passport-text" id="text2" style="top: 24.25%; left: 18%;">16.02.2024</div>
+      <div class="passport-text" id="text3" style="top: 24.25%; right: 20%;">880-111</div>
+      <div class="passport-text" id="text4" style="bottom: 22.7%; left: 44%;">АГАТОВНА</div>
+      <div class="passport-text" id="text5" style="bottom: 26.75%; left: 44%;">СОНЯ</div>
+      <div class="passport-text" id="text6" style="bottom: 35.5%; left: 44%;">ЗОМБИ</div>
+      <div class="passport-text" id="text7" style="bottom: 18.5%; left: 41%;">Ж</div>
+      <div class="passport-text" id="text8" style="bottom: 18.5%; left: 60%;">04.06.1976</div>
+      <div class="passport-text" id="text9" style="bottom: 14.50%; left: 44%;">Г. БОБРУЙСК</div>
+      <div class="passport-text rotated" id="text10" style="bottom: 20%; left: 93%;">14 15 103945</div>
+      <div class="passport-text rotated" id="text11" style="bottom: 70%; left: 93%;">14 15 103945</div>
+      <img src="zombisonya.png" class="passport-photo" alt="Фото поверх">
+    </div>
+
+    <div class="passport-buttons">
+      <button class="passport-btn" onclick="toggleLanguage()">Перевести</button>
+      <a href="skrin.html" class="passport-btn">Считывание</a>
+    </div>
+    
+</main>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <img src="log11o.png" alt="BrawlGuide" class="footer-logo">
+    <p>С любовью к играм, <span>BrawlGuide 2025</span></p>
+  </div>
+</footer>
+
+
+
+<script src="./translate.js"></script>
+
+
+</body>
+</html>

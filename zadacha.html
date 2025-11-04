@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Задача 1007 — Ёмкости</title>
+</head>
+<body>
+
+  <h2>Задача 1007</h2>
+  <p>Определить, поместится ли жидкость объёма M в кубическую ёмкость с ребром A, в цилиндрическую с высотой H и радиусом основания R, в обе или ни в одну.</p>
+
+  <label>Ребро куба (A): <input type="number" id="A"></label><br><br>
+  <label>Высота цилиндра (H): <input type="number" id="H"></label><br><br>
+  <label>Радиус цилиндра (R): <input type="number" id="R"></label><br><br>
+  <label>Объём жидкости (M): <input type="number" id="M"></label><br><br>
+
+  <button onclick="checkVolume()">Проверить</button>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function checkVolume() {
+      let A = parseFloat(document.getElementById("A").value);
+      let H = parseFloat(document.getElementById("H").value);
+      let R = parseFloat(document.getElementById("R").value);
+      let M = parseFloat(document.getElementById("M").value);
+
+      let cubeVolume = A ** 3;
+      let cylVolume = Math.PI * R ** 2 * H;
+
+      let result = "";
+
+      if (M <= cubeVolume && M <= cylVolume) {
+        result = "Жидкость поместится в обе ёмкости.";
+      } else if (M <= cubeVolume) {
+        result = "Жидкость поместится только в кубическую ёмкость.";
+      } else if (M <= cylVolume) {
+        result = "Жидкость поместится только в цилиндрическую ёмкость.";
+      } else {
+        result = "Жидкость не поместится ни в одну ёмкость.";
+      }
+
+      document.getElementById("result").textContent = result;
+    }
+  </script>
+
+</body>
+</html>

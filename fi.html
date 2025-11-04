@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>BrawlGuide // Фигурки</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #figures-catalog {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+    }
+    #figures-catalog th, #figures-catalog td {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+    }
+    #figures-catalog th {
+      background-color: #0a0000;
+      font-size: 1.2em;
+    }
+    #figures-catalog img {
+      max-width: 150px;
+      height: auto;
+    }
+    .buy-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #ff6600;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .buy-button:hover {
+      background-color: #e05500;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Brawl Stars" style="width:100%; height:auto;">
+</header>
+
+<nav>
+  <h1 class="quote bungee-regular">Собери все!</h1>
+  <div class="links">
+    <a href="index.html">Главная</a>
+    <a href="brawlers.html">Бравлеры</a>
+    <a href="modes.html">Режимы</a>
+    <a href="shop.html" class="active">Мерч</a>
+    <a href="test.html">Штаб</a>
+    <a href="contacts.html">Контакты</a>
+  </div>
+</nav>
+
+<main>
+  <section id="figures-section">
+    <h2 class="shop-title">Фигурки в наличии</h2>
+
+    <table id="figures-catalog">
+      <tr>
+        <th>Визуализируем</th>
+        <th>Добавляем в коллекцию</th>
+      </tr>
+      <tr>
+        <td><img src="fi11.png" alt="Фигурка 1"></td>
+        <td>
+          Бо, Rare <br>
+          8799 ₽<br>
+          <a href="order.html" class="buy-button">Купить</a>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="fi22.png" alt="Фигурка 2"></td>
+        <td>
+          Пенни, Rare <br>
+          2300 ₽<br>
+          <a href="order.html" class="buy-button">Купить</a>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="fi33.png" alt="Фигурка 3"></td>
+        <td>
+          Мэг, Exclusive!<br>
+          12399 ₽<br>
+          <a href="order.html" class="buy-button">Купить</a>
+        </td>
+      </tr>
+    </table>
+
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <img src="log11o.png" alt="BrawlGuide" class="footer-logo">
+    <p>С любовью к играм, <span>BrawlGuide 2025</span></p>
+  </div>
+</footer>
+</body>
+</html>

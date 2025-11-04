@@ -1,0 +1,892 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #000000; /* черный фон */
+  color: white;
+  margin: 0;
+}
+
+/* цитата */
+.quote {
+  font-family: 'Russo One', sans-serif; /* твой подключенный шрифт */
+  font-size: 48px;
+  color: red; /* красный */
+  text-align: center; /* по центру */
+  margin: 20px 0;
+}
+
+/* меню навигации */
+nav {
+  text-align: center; /* ссылки по центру */
+  margin-bottom: 20px;
+}
+
+nav .links a {
+  font-family: 'Russo One', sans-serif;
+  color: #ffffff; /* желтый */
+  text-decoration: none;
+  margin: 0 25px;
+  padding: 5px 10px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav .links a:hover {
+  text-decoration: underline;
+}
+
+nav .links a.active {
+  background: #ffeeee;
+  color: black;
+  border-radius: 5px;
+}
+.brawler-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* три картинки в строке */
+  gap: 20px; /* расстояние между ними */
+  padding: 20px;
+  justify-items: center; /* выравнивание по центру */
+}
+.brawler-gallery img {
+  height: 200px;       /* фиксируем высоту */
+  width: auto;         /* ширина подстраивается пропорционально */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  object-fit: contain; /* аккуратно вписывает картинку в рамку */
+}
+.brawler-gallery a {
+  text-decoration: none;
+}
+
+.brawler-gallery img {
+  height: 200px;
+  width: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brawler-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+}
+/* Золотой текст */
+.gold {
+  color: gold;
+  font-weight: bold;
+}
+
+/* Секция скинов */
+#skins {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#skins h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#skins .skin-images img {
+  width: 150px;
+  height: auto;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 600px) {
+  #skins .skin-images img {
+    width: 100px;
+    margin: 5px;
+  }
+}
+/* ==== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ "РЕЖИМЫ" ==== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mode-links {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.mode-links a {
+  margin: 0 15px;
+  color: red;
+  font-family: 'Russo One', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.mode-links a:hover {
+  text-decoration: underline;
+  color: rgb(249, 0, 0);
+}
+
+.mode-title {
+  color: gold;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+  font-size: 28px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.mode-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.mode-gallery img {
+  width: 45%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.mode-description {
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.recommended {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.recommended a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.recommended a:hover {
+  text-decoration: underline;
+}
+/* ==== СТИЛИ ДЛЯ РЕЖИМОВ ==== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mode-links {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.mode-links a {
+  margin: 0 15px;
+  color: rgb(252, 252, 252);
+  font-family: 'Russo One', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.mode-links a:hover {
+  text-decoration: underline;
+  color: darkred;
+}
+
+.mode-title {
+  color: red;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+  font-size: 28px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.mode-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.mode-gallery img {
+  width: 45%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.mode-description {
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.recommended {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.recommended strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.brawler-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.brawler-icons img {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.brawler-icons img:hover {
+  transform: scale(1.1);
+}
+.mode-tips {
+  position: relative;                    /* Для абсолютного позиционирования лампочки */
+  max-width: 900px;
+  margin: 0 auto 30px;
+  background-color: #FFD700;             /* Золотой фон */
+  border: 2px solid #FFB800;             /* Тёплая золотая рамка */
+  border-radius: 10px;
+  padding: 20px 25px;
+  color: black;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.mode-tips h3 {
+  color: black;                           
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.3); 
+  padding-bottom: 5px;
+}
+
+.mode-tips ul {
+  list-style: disc;
+  padding-left: 25px;
+  margin: 10px 0 0 0;
+}
+
+.mode-tips li {
+  color: black;                           
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Лампочка для блока lamp1 */
+.lamp1::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-image: url('nzp3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Лампочка для блока lamp2 */
+.lamp2::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-image: url('nzp2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Лампочка для блока lamp3 */
+.lamp3::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-image: url('br2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Лампочка для блока lamp4 */
+.lamp4::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-image: url('nk2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ==== СЕКЦИЯ МЕРЧ ==== */
+
+.shop-title {
+  text-align: center;
+  color: #FFD700; /* золотой */
+  font-family: 'Russo One', sans-serif;
+  font-size: 34px;
+  margin: 50px 0 40px 0;
+}
+
+.category-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 120px; /* расстояние между карточками */
+  margin-bottom: 60px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.08);
+}
+
+.img-container {
+  width: 240px;
+  height: 240px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Вот ключ — гарантирует, что подписи не исчезнут */
+.caption {
+  display: block;
+  font-family: 'Russo One', sans-serif;
+  font-size: 24px;
+  color: #fefefe;
+  margin-top: 5px;
+  text-align: center;
+  line-height: 1.2;
+  background: none !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* Сбрасываем возможные глобальные стили, которые ломают текст */
+a, a * {
+  color: inherit;
+  text-decoration: none;
+}
+/* ==== Блок с предложением о BrawlGuidePass ==== */
+
+.discount-banner {
+  text-align: center;
+  background-color: #111; /* тёмный фон, чтобы текст выделялся */
+  color: #FFD700;         /* золотой текст */
+  font-family: 'Russo One', sans-serif;
+  font-size: 22px;
+  padding: 30px 15px;
+  border-top: 2px solid #FFD700;
+  border-bottom: 2px solid #FFD700;
+  margin-top: 40px;
+  line-height: 1.5;
+}
+
+.discount-banner a.pass-link {
+  color: #FFEA00; /* ярко-золотой, чуть светлее */
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.discount-banner a.pass-link:hover {
+  color: #FFFFFF; /* при наведении — белый */
+  text-shadow: 0 0 8px #FFD700;
+}
+/* ==== Блок с предложением о BrawlGuidePass ==== */
+
+.discount-banner {
+  position: relative;
+  text-align: center;
+  background-color: #111;
+  color: #FFD700;
+  font-family: 'Russo One', sans-serif;
+  font-size: 22px;
+  padding: 50px 15px;
+  border-top: 2px solid #FFD700;
+  border-bottom: 2px solid #FFD700;
+  margin-top: 40px;
+  line-height: 1.5;
+  overflow: hidden; /* чтобы звёздочки не вылезали за рамку */
+}
+
+/* Ссылка */
+.discount-banner a.pass-link {
+  color: #FFEA00;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.discount-banner a.pass-link:hover {
+  color: #FFFFFF;
+  text-shadow: 0 0 8px #FFD700;
+}
+
+/* ==== ЗВЁЗДОЧКИ ==== */
+
+.discount-banner::before,
+.discount-banner::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('nzp2.png'); /* имя твоего файла */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.discount-banner::before {
+  top: 15%;
+  left: 10%;
+}
+
+.discount-banner::after {
+  bottom: 20%;
+  right: 15%;
+}
+
+/* Можно добавить ещё несколько звёзд через псевдоэлементы с nth-child */
+.discount-banner span.star1,
+.discount-banner span.star2 {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-image: url('nzp2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.discount-banner span.star1 {
+  top: 60%;
+  left: 20%;
+}
+
+.discount-banner span.star2 {
+  top: 30%;
+  right: 25%;
+}
+/* --- Страница ШТАБ --- */
+
+.staff-page {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.page-title {
+  text-align: center;
+  color: #ff0000;
+  margin-bottom: 30px;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+
+.worker {
+  display: flex;
+  align-items: flex-start;
+  background-color: #111;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ff0000;
+}
+
+.worker-photo {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 25px;
+}
+
+.worker-info {
+  flex: 1;
+}
+
+.worker-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.worker-list > li {
+  font-size: 1.2em;
+  color: #ff0000;
+}
+
+.worker-list ul {
+  margin-left: 20px;
+  color: white;
+  font-size: 1em;
+}
+
+.worker-list ul ul {
+  margin-left: 40px;
+  list-style-type: square;
+  color: #ccc;
+}
+.sparkle {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(90deg, #fff, #ffd700, #fff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 200%; }
+  100% { background-position: -200%; }
+}
+.staff-page {
+  counter-reset: worker-counter;
+}
+
+/* Общие настройки списка */
+.worker-list > li {
+  counter-increment: worker-counter;
+  position: relative;
+  list-style: none;
+  font-family: 'Russo One', sans-serif;
+  color: #fff;
+}
+
+/* Номер (перелив без свечения) */
+.worker-list > li::before {
+  content: counter(worker-counter) ". ";
+  font-weight: bold;
+  font-size: 1.2em;
+  background: linear-gradient(90deg, #fff, #ffd700, #fff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: soft-shine 3s linear infinite;
+}
+
+/* Имя (тот же мягкий перелив) */
+.worker-name {
+  background: linear-gradient(90deg, #fff, #ffd700, #fff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: soft-shine 3s linear infinite;
+  font-weight: bold;
+}
+
+/* Остальной текст — обычный */
+.worker-list ul {
+  background: none;
+  -webkit-text-fill-color: initial;
+  animation: none;
+}
+
+/* Анимация мягкого перелива */
+@keyframes soft-shine {
+  0% { background-position: 200%; }
+  100% { background-position: -200%; }
+}
+/* Блок с приглашением */
+.join-team {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Контейнер изображения */
+.big-image-wrapper {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #fff; /* чистая белая рамка */
+}
+
+/* Само изображение */
+.big-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Полное затемнение изображения */
+.big-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* затемнение всей картинки */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Текст и кнопка */
+.overlay-text {
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+}
+
+.overlay-text p {
+  font-size: 1.8em;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff; /* белая обводка */
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Кнопка */
+.contact-button {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-family: 'Russo One', sans-serif;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.contact-button:hover {
+  background-color: #e0e0e0;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+/* Адаптив под телефоны */
+@media (max-width: 640px) {
+  .big-image-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .overlay-text p {
+    font-size: 1.3em;
+  }
+}
+.insider-table-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.insider-table {
+  width: 80%;
+  max-width: 900px;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+  color: #fff;
+  border: 3px solid #ffcc00;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  background-image: url('z.png'); /* 🔹 путь к твоему фоновому изображению */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.insider-table th {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 1.3em;
+  padding: 20px;
+}
+
+.insider-table td {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px 15px;
+  font-size: 1em;
+  width: 50%;
+  vertical-align: top;
+}
+
+.insider-table a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.insider-table a:hover {
+  text-decoration: underline;
+}
+.site-footer {
+  background-color: #111;
+  border-top: 3px solid #ffcc00;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-family: 'Russo One', sans-serif;
+  color: #ffcc00;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 60px;
+  height: auto;
+  border-radius: 8px;
+  /* убрано подсвечивание */
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.footer-content span {
+  color: #fff;
+}
+/* --- 1. Общий шрифт и цвет текста --- */
+body {
+  font-family: 'Russo One', sans-serif;
+  color: #ffffff;
+  background-color: #000;
+  line-height: 1.6;
+}
+
+/* --- 2. Названия режимов: золотой ПЕРЕЛИВ, без свечения --- */
+.mode-title {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #fff, #ffd700, #fff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: soft-shine 3s linear infinite;
+}
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- 3. Картинки режимов: одинаковый размер, аккуратно выровнены --- */
+.mode-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.mode-gallery img {
+  width: 400px;      /* фиксированная ширина */
+  height: 250px;     /* одинаковая высота */
+  object-fit: cover; /* аккуратная обрезка без искажений */
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.mode-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* --- 4. Рекомендуемые бойцы: без рамок, аккуратно выровнены --- */
+.recommended {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.recommended strong {
+  display: block;
+  font-size: 1.2em;
+  background: linear-gradient(90deg, #ffcc00, #fff07a, #ffcc00);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s linear infinite;
+  margin-bottom: 10px;
+}
+
+.brawler-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.brawler-icons img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.brawler-icons img:hover {
+  transform: scale(1.1);
+}
+.skin-images {
+  display: flex;           /* располагаем скины в ряд */
+  gap: 15px;               /* расстояние между ними */
+  flex-wrap: wrap;         /* перенос на следующую строку, если места мало */
+  justify-content: center; /* центрируем весь ряд */
+}
+
+.skin-images img {
+  width: 200px;            /* фиксированная ширина всех скинов */
+  height: 200px;           /* фиксированная высота */
+  object-fit: cover;       /* чтобы картинка заполняла квадрат без искажений */
+  border-radius: 10px;     /* закругленные углы, как у тебя в других элементах */
+}
